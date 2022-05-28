@@ -1,0 +1,34 @@
+﻿@{ 
+    var rules = new List<string>(); // list of rules stored in Session["rules"]
+    Session["rules"] = rules;
+
+    if (Request["rule"] != null)
+    {
+        rules.Add(Request["rule"]);
+        Session["rules"] = rules; // czy takie kopiowanie jest poprawne?
+    }
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div>
+        <form method="POST" action="~/Rules.cshtml">
+            <input type="text" name="rule" />
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+    <div>
+        // TODO: expand ul and make REDIRECT
+        <ul>
+        @for (var i = 0; i < rules.Count; i++)
+        {
+            <li>@rules.ElementAt(i)</li>
+        }
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@Page.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Style.css">
+    <style>
+        body {
+            background-color: #9B2B32;
+        }
+    </style>
+</head>
+<body>
+    <div class="links">
+        <a href="Mark3.cshtml">Mark III</a>
+        <a href="Mark6.cshtml">Mark VI</a>
+    </div>
+    <div class="armour"></div>
+    <div class="plate">@RenderBody()</div>
+    <div class="armour"></div>
+    <div class="info">@RenderSection("Info")</div>
+</body>
+</html>
+
+/* 
+How the title of each page is set? 
+- Programowe ustawianie właściwości strony Title przy użyciu kodu takiego jak Page.Title="title"
+- Page directive overrides the html file
+*/
