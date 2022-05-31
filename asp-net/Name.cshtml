@@ -1,8 +1,8 @@
 ﻿@{ 
-    string name = "Robert Paulson";
-    if (Request["name"] != null)
+    string name = Request["name"];
+    if (String.IsNullOrEmpty(name))
     {
-        name = Request["name"];
+        name = "Robert Paulson";
     }
 }
 
@@ -13,7 +13,6 @@
     <title></title>
 </head>
 <body>
-    <p>@name</p>
     <ul>
         @for (var i = 0; i < 10; i++)
         {

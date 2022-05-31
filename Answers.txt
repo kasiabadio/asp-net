@@ -1,0 +1,3 @@
+3.
+Get -> After sending name "Kasia", "Kasia" was shown; parameters are in url
+Post -> After sending name "Kasia", "Kasia" was shown; parameters are not in url

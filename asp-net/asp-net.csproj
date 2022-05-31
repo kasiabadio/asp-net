@@ -104,6 +104,7 @@
     <Content Include="Suits\_Layout.cshtml" />
     <Content Include="Suits\Mark3.cshtml" />
     <Content Include="Suits\Mark6.cshtml" />
+    <Content Include="RedirectRules.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

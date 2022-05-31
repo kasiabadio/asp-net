@@ -1,11 +1,9 @@
 ﻿@{ 
-    var rules = new List<string>(); // list of rules stored in Session["rules"]
-    Session["rules"] = rules;
+    var rules = (List<string>)Session["rules"]; // list of rules stored in Session["rules"]
 
-    if (Request["rule"] != null)
+    if (rules == null)
     {
-        rules.Add(Request["rule"]);
-        Session["rules"] = rules; // czy takie kopiowanie jest poprawne?
+        rules = new List<string>();
     }
 }
 
@@ -16,13 +14,12 @@
 </head>
 <body>
     <div>
-        <form method="POST" action="~/Rules.cshtml">
+        <form method="POST" action="~/RedirectRules.cshtml">
             <input type="text" name="rule" />
             <input type="submit" value="Submit" />
         </form>
     </div>
     <div>
-        // TODO: expand ul and make REDIRECT
         <ul>
         @for (var i = 0; i < rules.Count; i++)
         {
