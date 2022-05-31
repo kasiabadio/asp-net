@@ -1,3 +1,9 @@
 3.
 Get -> After sending name "Kasia", "Kasia" was shown; parameters are in url
 Post -> After sending name "Kasia", "Kasia" was shown; parameters are not in url
+5.
+How the title of each page is set? 
+/* 
+How the title of each page is set? 
+- Programowe ustawianie w³aœciwoœci strony Title przy u¿yciu kodu takiego jak Page.Title="title"
+- Page directive overrides the html file
